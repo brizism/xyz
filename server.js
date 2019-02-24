@@ -4,7 +4,7 @@ const bodyParser = require('body-parser'); // access data with req.body
 const passport = require('passport');
 
 const users = require('./routes/api/users');
-const summary = require('./routes/api/summary');
+const income = require('./routes/api/income');
 const entry = require('./routes/api/entry');
 
 const app = express();
@@ -30,7 +30,7 @@ require('./config/passport')(passport);
 
 // Use Routes
 app.use('/api/users', users);
-app.use('/api/summary', summary);
+app.use('/api/income', income);
 app.use('/api/entry', entry);
 
 const port = process.env.PORT || 5000;
